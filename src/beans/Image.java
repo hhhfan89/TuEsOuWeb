@@ -1,6 +1,8 @@
 package beans;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 public class Image implements Serializable{
 	
@@ -9,7 +11,6 @@ public class Image implements Serializable{
 	private User user;
 	
 	public Image(){
-		
 	}
 
 	public int getId_image() {
