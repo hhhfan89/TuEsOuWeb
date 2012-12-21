@@ -1,14 +1,14 @@
 package beans;
 
 import java.io.Serializable;
-import java.sql.Date;
-import java.sql.Time;
+import java.util.HashSet;
 
 public class Coordinate implements Serializable{
 	
 	private int id_coordinate;
 	private float latitude;
 	private float longitude;
+	private HashSet<Track> tracks = new HashSet<Track>();
 	
 	public Coordinate(){
 		
@@ -36,6 +36,14 @@ public class Coordinate implements Serializable{
 
 	public void setLongitude(float longitude) {
 		this.longitude = longitude;
+	}
+
+	public HashSet<Track> getTracks() {
+		return tracks;
+	}
+
+	public void setTracks(HashSet<Track> tracks) {
+		this.tracks = tracks;
 	}
 	
 }

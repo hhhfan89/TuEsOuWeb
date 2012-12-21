@@ -3,6 +3,7 @@ package beans;
 import java.io.Serializable;
 import java.sql.Date;
 import java.sql.Time;
+import java.util.HashSet;
 
 public class Track implements Serializable{
 	
@@ -11,6 +12,8 @@ public class Track implements Serializable{
 	private Date date;
 	private Time start_time;
 	private Time finish_time;
+	private User user;
+	private HashSet<Coordinate> coordinates = new HashSet<Coordinate>();
 	
 	public Track(){
 		
@@ -54,6 +57,22 @@ public class Track implements Serializable{
 
 	public void setFinish_time(Time finish_time) {
 		this.finish_time = finish_time;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public HashSet<Coordinate> getCoordinates() {
+		return coordinates;
+	}
+
+	public void setCoordinates(HashSet<Coordinate> coordinates) {
+		this.coordinates = coordinates;
 	}
 	
 	
